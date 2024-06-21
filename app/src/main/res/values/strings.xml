@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FridgeManager</string>
+    <string name="selected_image_desc">Selected Image</string>
+    <string name="item_image_desc">Selected Image</string>
+</resources>
