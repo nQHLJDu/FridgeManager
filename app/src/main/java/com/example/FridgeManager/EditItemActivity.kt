@@ -42,10 +42,26 @@ class EditItemActivity : AppCompatActivity() {
             val updatedItem = item?.copy(number = updatedNumber, expiryDate = updatedExpiryDate)
 
             // 修正した情報をMainActivityに返す
-            val resultIntent = Intent().apply {
+            val updateIntent = Intent().apply {
                 putExtra("updatedItem", updatedItem)
             }
-            setResult(Activity.RESULT_OK, resultIntent)
+            setResult(Activity.RESULT_OK, updateIntent)
+            finish()
+        }
+
+        // 削除ボタンの処理
+        binding.deleteButton.setOnClickListener {
+            // 削除した情報をMainActivityに返す
+            val deleteIntent = Intent().apply {
+                putExtra("deleteItem", item)
+            }
+            setResult(Activity.RESULT_OK, deleteIntent)
+            finish()
+        }
+
+        // 閉じるボタンの処理
+        binding.closeButton.setOnClickListener {
+            // メイン画面に遷移
             finish()
         }
     }

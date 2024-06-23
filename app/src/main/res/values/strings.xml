@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">FridgeManager</string>
+    <string name="app_name">冷蔵庫管理アプリ</string>
     <string name="selected_image_desc">Selected Image</string>
+    <string name="add_item">食材追加</string>
+    <string name="check_expiry">消費期限確認</string>
+    <string name="close">閉じる</string>
+    <string name="delete">削除</string>
+    <string name="save">保存</string>
     <string name="item_image_desc">Selected Image</string>
 </resources>

@@ -69,9 +69,16 @@ class MainActivity : AppCompatActivity() {
                 fridgeItemAdapter.notifyItemInserted(fridgeItems.size - 1)
             }
         } else if (requestCode == REQUEST_CODE_EDIT_ITEM && resultCode == Activity.RESULT_OK) {
-            data?.let {
-                val updatedItem = it.getParcelableExtra<FridgeItem>("updatedItem")
+            val updatedItem = data?.getParcelableExtra<FridgeItem>("updatedItem")
+            val deleteItem = data?.getParcelableExtra<FridgeItem>("deleteItem")
+
+            // 更新時処理
+            if (updatedItem != null) {
                 updateItem(updatedItem)
+            }
+            // 削除時処理
+            else if (deleteItem != null) {
+                deleteItem(deleteItem)
             }
         }
     }
@@ -83,6 +90,17 @@ class MainActivity : AppCompatActivity() {
             if (index != -1) {
                 fridgeItems[index] = updatedItem
                 fridgeItemAdapter.notifyItemChanged(index)
+            }
+        }
+    }
+
+    // 削除した商品情報の反映deleteItem
+    private fun deleteItem(deleteItem: FridgeItem?) {
+        deleteItem?.let {
+            val index = fridgeItems.indexOfFirst { it.imageResId == deleteItem.imageResId }
+            if (index != -1) {
+                fridgeItems.removeAt(index)
+                fridgeItemAdapter.notifyItemRemoved(index)
             }
         }
     }
