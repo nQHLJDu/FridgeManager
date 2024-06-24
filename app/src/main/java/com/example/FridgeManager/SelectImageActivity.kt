@@ -22,8 +22,12 @@ class SelectImageActivity : AppCompatActivity() , DatePickerDialog.OnDateSetList
 
         // ImageViewのIDと対応する画像リソースのペアをリストにまとめる
         val imageViewData = listOf(
-            Triple(R.id.itemImageView1, R.drawable.bomb, "Bomb"),
-            Triple(R.id.itemImageView2, R.drawable.bullet, "Bullet")
+            Triple(R.id.itemImageView1, R.drawable.kyabetsu, "キャベツ"),
+            Triple(R.id.itemImageView2, R.drawable.tomato, "トマト"),
+            Triple(R.id.itemImageView3, R.drawable.kyuri, "きゅうり"),
+            Triple(R.id.itemImageView4, R.drawable.renkon, "れんこん"),
+            Triple(R.id.itemImageView5, R.drawable.sanma, "サンマ"),
+            Triple(R.id.itemImageView6, R.drawable.apple, "りんご"),
             // 他の画像ペアもここに追加
         )
 

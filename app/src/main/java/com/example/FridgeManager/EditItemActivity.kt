@@ -24,6 +24,7 @@ class EditItemActivity : AppCompatActivity() {
         // 取得したアイテムの情報をUIに表示
         item?.let {
             binding.itemImageView.setImageResource(it.imageResId)
+            binding.itemNameTextView.text = it.name
             binding.numberEditText.setText(it.number.toString())
             binding.expiryDateEditText.setText(it.expiryDate)
         }
