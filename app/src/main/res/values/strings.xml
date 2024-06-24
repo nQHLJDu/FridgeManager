@@ -6,5 +6,6 @@
     <string name="close">閉じる</string>
     <string name="delete">削除</string>
     <string name="save">保存</string>
+    <string name="back">戻る</string>
     <string name="item_image_desc">Selected Image</string>
 </resources>

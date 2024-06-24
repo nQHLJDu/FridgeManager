@@ -74,6 +74,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/expiryDateLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -109,35 +110,36 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/primary"
         android:contentDescription="@string/save"
         android:paddingBottom="20dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_save"
-        app:layout_constraintTop_toBottomOf="@+id/expiryDateEditText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expiryDateLayout"
+        app:layout_constraintVertical_bias="0.046"
         app:tint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="314dp" />
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="4dp"
         android:backgroundTint="@color/primary"
         android:contentDescription="@string/delete"
         android:paddingBottom="20dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_delete"
-        app:layout_constraintTop_toBottomOf="@+id/expiryDateEditText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expiryDateLayout"
+        app:layout_constraintVertical_bias="0.185"
         app:tint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

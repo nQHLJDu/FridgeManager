@@ -8,17 +8,19 @@ import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.FridgeManager.databinding.ActivitySelectImageBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
 class SelectImageActivity : AppCompatActivity() , DatePickerDialog.OnDateSetListener{
-
+    private lateinit var binding: ActivitySelectImageBinding
     private lateinit var expiryDateEditText: EditText
     private val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.US)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_image)
+        binding = ActivitySelectImageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // ImageViewのIDと対応する画像リソースのペアをリストにまとめる
         val imageViewData = listOf(
@@ -36,6 +38,11 @@ class SelectImageActivity : AppCompatActivity() , DatePickerDialog.OnDateSetList
             findViewById<ImageView>(imageViewId).setOnClickListener {
                 showInputDialog(imageResId, imageName)
             }
+        }
+
+        // 戻るボタン押下時
+        binding.backButton.setOnClickListener {
+            finish()
         }
     }
 

@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".SelectImageActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="食材を選択してください"
-        android:textSize="36sp"
+        android:textSize="28sp"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="16dp" />
 
@@ -82,5 +83,18 @@
             android:layout_margin="8dp" />
 
     </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/back"
+        app:tint="@color/white"
+        app:backgroundTint="@color/primary"
+        android:scaleType="centerInside"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>
